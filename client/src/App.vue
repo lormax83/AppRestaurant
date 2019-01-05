@@ -16,6 +16,12 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+
+    <a><router-link to="/AppCommande">AppCommande</router-link></a>
+    <a><router-link to="/AppMenu">AppMenu</router-link></a>
+    <a><router-link to="/AppDetail">AppDetail</router-link></a>
+    <a><router-link to="/Restau">Restau</router-link></a>
+    
   </div>
 </template>
 
