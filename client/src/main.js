@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import AppCommande from './component/app-commande.vue';
 import AppMenu from './component/app-menu-restaurant.vue';
 import AppDetail from './component/app-restau-detail.vue';
+import Restau from './component/restaurant.vue';
 
 Vue.use(VueRouter);
  
@@ -16,6 +17,8 @@ const routes = [
     {path:'/AppMenu', component: AppMenu},
 
     {path:'/AppDetail', component: AppDetail},
+
+    {path:'/Restau', component: Restau},
  
 ]
  
