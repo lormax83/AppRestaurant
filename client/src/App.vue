@@ -2,11 +2,14 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <app-restau-detail></app-restau-detail>
-  
-  
 
-</div>
+    <a><router-link to="/AppCommande">AppCommande</router-link></a>
+    <a><router-link to="/AppMenu">AppMenu</router-link></a>
+    <a><router-link to="/AppDetail">AppDetail</router-link></a>
+    <a><router-link to="/Restau">Restau</router-link></a>
+
+    <restau></restau>
+  </div>
 </template>
 
 <script>
@@ -14,7 +17,7 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Bienvenue sur l\'App Restaurant'
+      msg: 'Bienvenu sur l\'AppRestaurant'
     }
   }
 }
@@ -33,6 +36,17 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 a {
   color: #42b983;
 }

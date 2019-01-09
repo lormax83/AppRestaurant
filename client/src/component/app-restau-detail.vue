@@ -1,70 +1,29 @@
 <template>
-<div id="app-restau-detail">
-    <h1>Liste des Restaurants</h1>
-    <p>
-        <label>
-            Rechercher par nom : 
-            <input type="text">
-            <li v-for="(restaurant, index) in restaurants">
-                {{restaurant.nom}}
-                {{restaurant.cuisine}}
-        </li>           
-                    
-        </label>
-    </p>
-</div>
-    
+
+ <md-card>
+      <md-card-header>
+        <md-card-header-text>
+          			<div class="action">
+<div class="md-title"><h1 style="text-align:center;font-size:45px;font-family:sans-serif;color:#655252;"><md-icon class="md-size-5x fa fa-home"></md-icon>Détail du restaurants</h1></div>
+			</div>
+     
+	 </md-card-header-text>
+		
+		<md-card-content>
+			
+<h2>Nom : {{r.name}}</h2>
+<h2>Cuisine : {{r.cuisine}}</h2>
+
+<h2>Localisation</h2>
+<p>Batiment : {{r.building}}</p>
+<p>Rue : {{r.street}}</p>
+<p>code postal : {{r.zipcode}}</p>
+<p>Arrondissement : {{r.borough}}</p>
+<p>Notes : {{r.grades}}</p>
+		
+        </md-card-content>
+
+	</md-card-header>
+</md-card>
+
 </template>
-
-<script>
-    export default {
-        data() {
-            return{
-                restaurants: [
-                    {nom: 'café de Paris'},
-                    {cuisine: 'Française' }
-                    ],
-                    nbRestaurants: 0,
-            nbPagesDeResultats: 0,
-            nom: '',
-            cuisine: '',
-            nomAdd: '',
-            cuisineAdd: '',
-            page: 0,
-            pagesize: 10,
-            nomRecherche: "",
-            }
-        },created: function init(){
-            getRestaurantsFromServer();
-        },
-        created: function getRestaurantsFromServer() {
-                let url = "http://localhost:8080/api/restaurants?page=" +
-                    this.page +
-                    "&pagesize=" + this.pagesize +
-                    "&name=" + this.nomRecherche;
-
-                // ARROW FUNCTIONS PRESERVENT LE THIS !!!
-                fetch(url)
-                    .then((responseJSON) => {
-                        responseJSON.json()
-                            .then((responseJS) => {
-                                // Maintenant res est un vrai objet JavaScript
-                                console.log("restaurants récupérés");
-                                this.restaurants = responseJS.data;
-                            });
-                    })
-                    .catch(function (err) {
-                        console.log(err);
-                    });
-            }
-        
-    }
-
-   </script>
-
-
-<style>
-
-</style>
-
-
