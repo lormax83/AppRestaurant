@@ -31,6 +31,7 @@ const router = new VueRouter({
 })
 
 Vue.component('restau',Restau);
+Vue.component('app-restau-detail',AppDetail)
 
 new Vue({
   el: '#app',

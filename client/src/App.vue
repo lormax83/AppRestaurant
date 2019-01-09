@@ -2,12 +2,6 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-
-    <a><router-link to="/AppCommande">AppCommande</router-link></a>
-    <a><router-link to="/AppMenu">AppMenu</router-link></a>
-    <a><router-link to="/AppDetail">AppDetail</router-link></a>
-    <a><router-link to="/Restau">Restau</router-link></a>
-
     <restau></restau>
   </div>
 </template>

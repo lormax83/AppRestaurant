@@ -1,16 +1,6 @@
 <template>
-
- <md-card>
-      <md-card-header>
-        <md-card-header-text>
-          			<div class="action">
-<div class="md-title"><h1 style="text-align:center;font-size:45px;font-family:sans-serif;color:#655252;"><md-icon class="md-size-5x fa fa-home"></md-icon>Gestion des restaurants</h1></div>
-			</div>
-     
-	 </md-card-header-text>
-		
-		<md-card-content>
-			<div class="action">
+<div id="app">
+<div class="action">
 				<p>	    
 					<h1 class="titre"><md-icon class="fa fa-bars"></md-icon>Liste des restaurants : </h1>	
 					<p style="font-size: 21px;font-family: sans-serif;">Nombre de restaurants : {{nbRestaurants}}, nb pages = {{nbPagesDeResultats}}</p>            
@@ -26,11 +16,7 @@
 	<div class="action">
 
         <form id="formulaireModification"  v-on:submit="modifierRestaurant" style="display:none">
-		    <md-card class="md-layout-item md-size-50 md-small-size-100">
-				<md-card-header>
 					<div class="md-title"><h1 class="titre"><md-icon class="fa fa-plus"></md-icon>Modification d'un restaurant :</h1></div>
-				</md-card-header>
-				<md-card-content>
 				<div class="md-layout-item md-small-size-100">
                 <label>
                     Id: <input type="text" name="_id" id="idModification"
@@ -47,12 +33,7 @@
                     value="" required placeholder="Cuisine française">
                 </label>
                 <p></p>
-				</div>
-				</md-card-content>
-				<md-card-actions>
-                <button class="bouton">Modifier ce restaurant</button>
-				</md-card-actions>
-			</md-card>
+				</div> <button class="bouton">Modifier ce restaurant</button>
         </form>
 	</div>
 	
@@ -67,7 +48,8 @@
                     <td>{{r.name}}</td>
                     <td>{{r.cuisine}}</td>
                     <td>
-            <router-link :to="`/app-restau-detail/{{r._id}}`">Detail</router-link>
+
+            <a v-link="{path: 'http://localhost:8080/api/restaurants/' + r.id}">Detail</a>
 
                 </td>
             </tr>
@@ -87,10 +69,8 @@
 	<div style="margin-top:20px;font-size:15px;text-align:center;font-family: sans-serif;">Page : {{page}}</div>
 
 		</div>
-        </md-card-content>
-
-	</md-card-header>
-</md-card>
+</div>
+			
 
 </template>
 
@@ -107,7 +87,7 @@ export default {
             cuisineAdd: '',
             page: 0,
             pagesize: 10,
-            nomRecherche: ""
+            nomRecherche: "",
             }
         },
         mounted() {
@@ -137,56 +117,6 @@ export default {
                         console.log(err);
                     });
             },
-            supprimerRestaurant(index) {
-                let url = "http://localhost:8080/api/restaurants/" + this.restaurants[index]._id;
-
-                fetch(url, {
-                    method: "DELETE",
-                })
-                    .then((responseJSON) => {
-                        responseJSON.json()
-                            .then((res) => {
-                                this.getRestaurantsFromServer();
-                                console.log("Restaurant supprimé");
-                            });
-                    })
-                    .catch(function (err) {
-                        console.log(err);
-                    });
-            },
-            ajouterRestaurant(event) {
-                // eviter le comportement par defaut
-                event.preventDefault();
-
-                // On recupère le formulaire
-                let form = event.target;
-
-                // On recupere les données du formulaire
-                let dataFormulaire = new FormData(form);
-
-                // On envoie une requête POST au serveur
-                let url = "http://localhost:8080/api/restaurants";
-
-                fetch(url, {
-                    method: "POST",
-                    body: dataFormulaire
-                })
-                    .then((responseJSON) => {
-                        responseJSON.json()
-                            .then((responseJS) => {
-                                // Maintenant res est un vrai objet JavaScript
-                                console.log(responseJS.msg);
-                                this.getRestaurantsFromServer();
-                            });
-                    })
-                    .catch(function (err) {
-                        console.log(err);
-                    });
-
-                // On remet les champs du formulaire à zéro
-                this.nomAdd = "";
-                this.cuisineAdd = "";
-            },
             getColor(index) {
                 return (index % 2) ? 'white' : 'lightgrey';
             },
@@ -211,14 +141,6 @@ export default {
 			Premierepage() {
                 this.page = 0;
                 this.getRestaurantsFromServer();
-            },
-			
-            formModifierRestaurant(index) {
-                document.getElementById('idModification').value = this.restaurants[index]._id;
-                document.getElementById('nomModification').value = this.restaurants[index].name;
-                document.getElementById('cuisineModification').value = this.restaurants[index].cuisine;
-                document.getElementById('formulaireModification').style.display = "initial";
-
             },
 			
             modifierRestaurant(event) {
