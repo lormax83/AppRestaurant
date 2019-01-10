@@ -61,6 +61,7 @@
       <div
         style="margin-top:20px;font-size:15px;text-align:center;font-family: sans-serif;"
       >Page : {{page+1}}</div>
+       <br>
     </div>
     <div id="app-restau-detail">
       <table>
@@ -80,7 +81,8 @@
         </tbody>
       </table>
       <br>
-      <button>Voir le Menu</button>
+      <router-link to="/AppMenu"><button>Voir le Menu</button></router-link>
+      
     </div>
   </div>
 </template>

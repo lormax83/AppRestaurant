@@ -2,6 +2,8 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
+    
+    <app-menu-restaurant></app-menu-restaurant>
     <restau></restau>
   </div>
 </template>

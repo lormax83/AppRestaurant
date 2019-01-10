@@ -180,7 +180,7 @@ app.get('/api/starter/count', function(req, res) {
 
 app.get('/api/starter', function(req, res) { 
     let page = parseInt(req.query.page || 1);
-    let pagesize = parseInt(req.query.pagesize || 10);
+    let pagesize = parseInt(req.query.pagesize || 1);
 
     let name = req.query.name || '';
 

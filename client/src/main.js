@@ -2,8 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router';
 
-import AppCommande from './component/app-commande.vue';
-import AppMenu from './component/app-menu-restaurant.vue';
+import Menu from './component/app-menu-restaurant.vue';
 import AppDetail from './component/app-restau-detail.vue';
 import Restau from './component/restaurant.vue';
 
@@ -12,9 +11,7 @@ Vue.use(VueRouter);
  
 const routes = [
  
-    {path:'/AppCommande', component: AppCommande},
- 
-    {path:'/AppMenu', component: AppMenu},
+    {path:'/AppMenu', component: Menu},
 
     {path:'/AppDetail', component: AppDetail},
 
@@ -30,8 +27,9 @@ const router = new VueRouter({
  
 })
 
-Vue.component('restau',Restau);
-Vue.component('app-restau-detail',AppDetail)
+Vue.component('restau',Restau),
+Vue.component('app-restau-detail',AppDetail),
+Vue.component('app-menu-restaurant',Menu)
 
 new Vue({
   el: '#app',
