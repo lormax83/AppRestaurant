@@ -29,7 +29,7 @@
           <td>{{r.name}}</td>
           <td>{{r.cuisine}}</td>
           <td>
-            <a href="#app-restau-detail" v-on:click="getUnRestaurant(r._id)">Detail</a>
+            <a href="#app-restau-detail" v-on:click="getUnRestaurant(r._id); show =true">Detail</a>
           </td>
         </tr>
       </tbody>
@@ -63,7 +63,8 @@
       >Page : {{page+1}}</div>
        <br>
     </div>
-    <div id="app-restau-detail">
+    <div id="app-restau-detail" v-if="show === true">
+      <h2>Details du Restaurant</h2>
       <table>
         <tr>
           <th>Nom:</th>
@@ -83,6 +84,7 @@
       <br>
       <router-link to="/AppMenu"><button>Voir le Menu</button></router-link>
       
+<router-view></router-view>
     </div>
   </div>
 </template>
@@ -104,7 +106,8 @@ export default {
       nomRestauDetail: "",
       cuisineRestauDetail: "",
       scoreRestauDetail: "",
-      addressRestauDetail: ""
+      addressRestauDetail: "",
+      show:false,
     };
   },
   mounted() {
@@ -143,7 +146,6 @@ export default {
       fetch(url)
         .then(responseJSON => {
           responseJSON.json().then(responseJS => {
-            console.log(responseJS.restaurant);
             this.nomRestauDetail = responseJS.restaurant.name;
             this.cuisineRestauDetail = responseJS.restaurant.cuisine;
             this.scoreRestauDetail = 0;
@@ -162,10 +164,6 @@ export default {
               responseJS.restaurant.address.zipcode +
               " " +
               responseJS.restaurant.borough;
-            console.log(nomRestauDetail);
-            console.log(cuisineRestauDetail);
-            console.log(scoreRestauDetail);
-            console.log(addressRestauDetail);
           });
         })
         .catch(function(err) {

@@ -179,8 +179,8 @@ app.get('/api/starter/count', function(req, res) {
 });
 
 app.get('/api/starter', function(req, res) { 
-    let page = parseInt(req.query.page || 1);
-    let pagesize = parseInt(req.query.pagesize || 1);
+    let page = parseInt(req.query.page || 0);
+    let pagesize = parseInt(req.query.pagesize || 11);
 
     let name = req.query.name || '';
 
@@ -240,8 +240,8 @@ app.get('/api/main/count', function(req, res) {
 });
 
 app.get('/api/main', function(req, res) { 
-    let page = parseInt(req.query.page || 1);
-    let pagesize = parseInt(req.query.pagesize || 10);
+    let page = parseInt(req.query.page || 0);
+    let pagesize = parseInt(req.query.pagesize || 11);
 
     let name = req.query.name || '';
 
@@ -300,8 +300,8 @@ app.get('/api/dessert/count', function(req, res) {
 });
 
 app.get('/api/dessert', function(req, res) { 
-    let page = parseInt(req.query.page || 1);
-    let pagesize = parseInt(req.query.pagesize || 10);
+    let page = parseInt(req.query.page || 0);
+    let pagesize = parseInt(req.query.pagesize || 11);
 
     let name = req.query.name || '';
 
