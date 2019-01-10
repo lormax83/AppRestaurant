@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5c377f8e3691f32ed89d858d"},"index":{"$numberInt":"0"},"name":"Tiramissu","price":{"$numberDouble":"7.99"}}
+{"_id":{"$oid":"5c37a40a3691f32ed89d85a1"},"index":{"$numberInt":"1"},"name":"Dame Blanche","price":{"$numberDouble":"8.99"}}
+{"_id":{"$oid":"5c37a4393691f32ed89d85a2"},"index":{"$numberInt":"2"},"name":"Banana Split","price":{"$numberDouble":"8.99"}}
+{"_id":{"$oid":"5c37a4643691f32ed89d85a3"},"index":{"$numberInt":"3"},"name":"Tarte aux Pommes","price":{"$numberDouble":"5.99"}}
+{"_id":{"$oid":"5c37a49a3691f32ed89d85a4"},"index":{"$numberInt":"4"},"name":"Brownies","price":{"$numberDouble":"5.99"}}
+{"_id":{"$oid":"5c37a4b73691f32ed89d85a5"},"index":{"$numberInt":"5"},"name":"MilkShake","price":{"$numberInt":"4"}}
+{"_id":{"$oid":"5c37a4eb3691f32ed89d85a6"},"index":{"$numberInt":"6"},"name":"Salade de Fruit","price":{"$numberDouble":"9.99"}}
+{"_id":{"$oid":"5c37a5083691f32ed89d85a7"},"index":{"$numberInt":"7"},"name":"Chocolatine","price":{"$numberDouble":"2.99"}}
+{"_id":{"$oid":"5c37a52b3691f32ed89d85a8"},"index":{"$numberInt":"8"},"name":"Café Gourmand","price":{"$numberDouble":"11.99"}}
+{"_id":{"$oid":"5c37a54a3691f32ed89d85a9"},"index":{"$numberInt":"9"},"name":"CheeseCake","price":{"$numberDouble":"8.99"}}
+{"_id":{"$oid":"5c37a5ac3691f32ed89d85aa"},"index":{"$numberInt":"10"},"name":"Crêpes Nutella","price":{"$numberDouble":"4.99"}}

@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5c377a323691f32ed89d858b"},"index":{"$numberInt":"0"},"name":"Salade césar","price":{"$numberDouble":"10.99"}}
+{"_id":{"$oid":"5c3785b33691f32ed89d858e"},"index":{"$numberInt":"1"},"name":"Carpaccio de Saumon","price":{"$numberDouble":"13.99"}}
+{"_id":{"$oid":"5c3790c23691f32ed89d8590"},"index":{"$numberInt":"2"},"name":"Rillettes","price":{"$numberDouble":"3.99"}}
+{"_id":{"$oid":"5c37a10d3691f32ed89d8592"},"index":{"$numberInt":"3"},"name":"Assiette Charcutrie","price":{"$numberDouble":"8.99"}}
+{"_id":{"$oid":"5c37a13c3691f32ed89d8593"},"index":{"$numberInt":"4"},"name":"Salade verte","price":{"$numberDouble":"2.99"}}
+{"_id":{"$oid":"5c37a1623691f32ed89d8594"},"index":{"$numberInt":"5"},"name":"Soupe de tomates","price":{"$numberDouble":"4.99"}}
+{"_id":{"$oid":"5c37a1893691f32ed89d8595"},"index":{"$numberInt":"6"},"name":"Nems","price":{"$numberDouble":"6.99"}}
+{"_id":{"$oid":"5c37a1af3691f32ed89d8596"},"index":{"$numberInt":"7"},"name":"Oeuf à la coque","price":{"$numberDouble":"4.99"}}
+{"_id":{"$oid":"5c37a1e13691f32ed89d8597"},"index":{"$numberInt":"8"},"name":"Rouleaux de Printemps","price":{"$numberDouble":"7.99"}}
+{"_id":{"$oid":"5c37a22d3691f32ed89d8598"},"index":{"$numberInt":"9"},"name":"Huitres","price":{"$numberDouble":"11.99"}}
+{"_id":{"$oid":"5c37a60c3691f32ed89d85ac"},"index":{"$numberInt":"10"},"name":"Tomates Mozzarela","price":{"$numberDouble":"8.99"}}

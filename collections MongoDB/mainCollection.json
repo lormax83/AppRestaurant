@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5c377f4e3691f32ed89d858c"},"index":{"$numberInt":"0"},"name":"Pâtes à la Carbonnara","price":{"$numberDouble":"14.99"}}
+{"_id":{"$oid":"5c37a2593691f32ed89d8599"},"index":{"$numberInt":"1"},"name":"Pizza di Buffa","price":{"$numberDouble":"11.99"}}
+{"_id":{"$oid":"5c37a29c3691f32ed89d859a"},"index":{"$numberInt":"2"},"name":"Steak","price":{"$numberDouble":"16.99"}}
+{"_id":{"$oid":"5c37a2cb3691f32ed89d859b"},"index":{"$numberInt":"3"},"name":"Assiète Vegan","price":{"$numberDouble":"17.99"}}
+{"_id":{"$oid":"5c37a3143691f32ed89d859c"},"index":{"$numberInt":"4"},"name":"Poulet Curry","price":{"$numberDouble":"15.99"}}
+{"_id":{"$oid":"5c37a3343691f32ed89d859d"},"index":{"$numberInt":"5"},"name":"Assiète Carnivor","price":{"$numberDouble":"16.99"}}
+{"_id":{"$oid":"5c37a35a3691f32ed89d859e"},"index":{"$numberInt":"6"},"name":"Ratatouille","price":{"$numberDouble":"10.99"}}
+{"_id":{"$oid":"5c37a3953691f32ed89d859f"},"index":{"$numberInt":"7"},"name":"Sushis","price":{"$numberDouble":"14.99"}}
+{"_id":{"$oid":"5c37a3c63691f32ed89d85a0"},"index":{"$numberInt":"8"},"name":"CheeseBurger","price":{"$numberDouble":"14.99"}}
+{"_id":{"$oid":"5c37a5e53691f32ed89d85ab"},"index":{"$numberInt":"9"},"name":"Raclette","price":{"$numberDouble":"17.99"}}
+{"_id":{"$oid":"5c37a6c73691f32ed89d85ad"},"index":{"$numberInt":"10"},"name":"Choucroute","price":{"$numberDouble":"15.99"}}
