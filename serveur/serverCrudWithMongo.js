@@ -166,3 +166,184 @@ app.delete('/api/restaurants/:id', function(req, res) {
  	});
 })
 
+app.get('/api/starter/count', function(req, res) {
+    let name = req.query.name || '';
+
+    mongoDBModule.countstarter(name, function(data) {
+        var objdData = {
+            msg:"starter count",
+            data: data
+        }
+        res.send(JSON.stringify(objdData));
+    });
+});
+
+app.get('/api/starter', function(req, res) { 
+    let page = parseInt(req.query.page || 1);
+    let pagesize = parseInt(req.query.pagesize || 10);
+
+    let name = req.query.name || '';
+
+
+ 	mongoDBModule.findstarter(page, pagesize, name, function(data,count) {
+ 		var objdData = {
+ 			msg:"starter recherchés avec succès",
+ 			data: data,
+			count:count
+ 		}
+ 		res.send(JSON.stringify(objdData)); 
+ 	}); 
+});
+
+app.get('/api/starter/:id', function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.findstarterById(id, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+ 
+});
+
+app.post('/api/starter', multerData.fields([]), function(req, res) {
+
+ 	mongoDBModule.createstarter(req.body, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+});
+
+app.put('/api/starter/:id', multerData.fields([]), function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.updatestarter(id, req.body, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+});
+
+app.delete('/api/starter/:id', function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.deletestarter(id, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+})
+
+app.get('/api/main/count', function(req, res) {
+    let name = req.query.name || '';
+
+    mongoDBModule.countmain(name, function(data) {
+        var objdData = {
+            msg:"main count",
+            data: data
+        }
+        res.send(JSON.stringify(objdData));
+    });
+});
+
+app.get('/api/main', function(req, res) { 
+    let page = parseInt(req.query.page || 1);
+    let pagesize = parseInt(req.query.pagesize || 10);
+
+    let name = req.query.name || '';
+
+
+ 	mongoDBModule.findmain(page, pagesize, name, function(data,count) {
+ 		var objdData = {
+ 			msg:"main recherchés avec succès",
+ 			data: data,
+			count:count
+ 		}
+ 		res.send(JSON.stringify(objdData)); 
+ 	}); 
+});
+
+app.get('/api/main/:id', function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.findmainById(id, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+ 
+});
+
+app.post('/api/main', multerData.fields([]), function(req, res) {
+
+ 	mongoDBModule.createmain(req.body, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+});
+
+app.put('/api/main/:id', multerData.fields([]), function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.updatemain(id, req.body, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+});
+
+app.delete('/api/main/:id', function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.deletemain(id, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+})
+app.get('/api/dessert/count', function(req, res) {
+    let name = req.query.name || '';
+
+    mongoDBModule.countdessert(name, function(data) {
+        var objdData = {
+            msg:"dessert count",
+            data: data
+        }
+        res.send(JSON.stringify(objdData));
+    });
+});
+
+app.get('/api/dessert', function(req, res) { 
+    let page = parseInt(req.query.page || 1);
+    let pagesize = parseInt(req.query.pagesize || 10);
+
+    let name = req.query.name || '';
+
+
+ 	mongoDBModule.finddessert(page, pagesize, name, function(data,count) {
+ 		var objdData = {
+ 			msg:"dessert recherchés avec succès",
+ 			data: data,
+			count:count
+ 		}
+ 		res.send(JSON.stringify(objdData)); 
+ 	}); 
+});
+
+app.get('/api/dessert/:id', function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.finddessertById(id, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+ 
+});
+
+app.post('/api/dessert', multerData.fields([]), function(req, res) {
+
+ 	mongoDBModule.createdessert(req.body, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+});
+
+app.put('/api/dessert/:id', multerData.fields([]), function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.updatedessert(id, req.body, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+});
+
+app.delete('/api/dessert/:id', function(req, res) {
+	var id = req.params.id;
+
+ 	mongoDBModule.deletedessert(id, function(data) {
+ 		res.send(JSON.stringify(data)); 
+ 	});
+})
